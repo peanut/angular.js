@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { ListComponent } from './components/list/list.component';
+import { RouterModule} from '@angular/'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,12 @@ import { ListComponent } from './components/list/list.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule，
+    RouterModule.forRoot([
+      {path:'todolist',component:TodolistComponent}
+      {path:'todolist',component:Goodscomponent}
+      {path:'todolist',component:Todolistcomponent}
+    ])
   ],
   providers:[ ],
   bootstrap: [AppComponent]
