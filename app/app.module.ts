@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { ListComponent } from './components/list/list.component';
+import { AddLocalStorageService } from './services/add-local-storage.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { ListComponent } from './components/list/list.component';
     BrowserModule,
     FormsModule
   ],
-  providers:[ ],
+  providers: [
+    AddLocalStorageService    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

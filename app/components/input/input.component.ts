@@ -9,19 +9,17 @@ export class InputComponent implements OnInit {
 
   constructor() { }
   
-  ngOnInit() { }
+  ngOnInit() {
+  }
   
-  content='';  //用于存放输入框中内容；
-  @Output() getContent = new EventEmitter();//getIndex是需要传给父组件的值
+  content = '';
+  @Output() getContent = new EventEmitter();
   
-  
-  keyData(e) {
-    if(e.keyCode == 13){     
+  keyData(e){
+    if(e.keyCode == 13) {     
       console.log(this.content); 
-      this.getContent.emit(this.content); //抛出content给父类
+      this.getContent.emit(this.content); 
       this.content = ''; 
     }
-  
   }
-
 }

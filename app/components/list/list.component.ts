@@ -10,16 +10,24 @@ export class ListComponent implements OnInit {
 
   constructor(public add:AddLocalStorageService) { }
 
+  
   @Input() tolist;
   @Input() doing;
-  comlist=[]; 
-  done=0;  
+  comlist = []; 
+  done = 0;  
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.add.addLocalStorage( this.doing);  
+  }
+
+  ngOnChanges() {
+    this.add.addLocalStorage( this.doing);  
+  }  
+   
    
   change(idx) {    
     this.comlist.push(this.tolist[idx]);
-    this.done = this.comlist.length; 
+    this.done = this.comlist.length;
     this.tolist.splice(idx, 1);
     this.doing = this.tolist.length;
     this.add.addLocalStorage(this.doing);    
@@ -40,7 +48,7 @@ export class ListComponent implements OnInit {
   }
 
   delData2(i) {
-    this.comlist.splice(i,1);
+    this.comlist.splice(i, 1);
     this.done = this.comlist.length;
   }
 }
