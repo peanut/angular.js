@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { ListComponent } from './components/list/list.component';
-import { RouterModule} from '@angular/'
+import { AddLocalStorageService } from './services/add-local-storage.service';
 
 @NgModule({
   declarations: [
@@ -16,14 +16,11 @@ import { RouterModule} from '@angular/'
   ],
   imports: [
     BrowserModule,
-    FormsModule，
-    RouterModule.forRoot([
-      {path:'todolist',component:TodolistComponent}
-      {path:'todolist',component:Goodscomponent}
-      {path:'todolist',component:Todolistcomponent}
-    ])
+    FormsModule
   ],
-  providers:[ ],
+  providers: [
+    AddLocalStorageService    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
