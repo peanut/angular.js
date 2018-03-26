@@ -1,0 +1,41 @@
+
+ul, li{
+    list-style: none;
+}
+
+li{
+    width: 40%;
+    max-width: 200px;
+    height: 350px;
+    font-size: 18px;
+    float: left;
+    background: rgb(176, 202, 206);
+}
+
+.img {
+    width: 100%;
+    height: 200px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    width: 100%;
+    margin-top: 0px;
+    padding-left: 5%;
+}
+
+.name {
+    width: 100%;
+    height: 80px;
+    clear: both;
+}
+
+.other{
+    width: 100%;
+    height: 30px;
+    clear: left;
+}

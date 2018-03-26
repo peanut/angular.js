@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let item of list">
+    <div class="img">
+      <a [routerLink]="['/goods/']" [queryParams]="{id:item.goodsName}">
+        <img [src]="item.goodsListImg"/>
+      </a>
+    </div>
+    <div class="name">
+      <a [routerLink]="['/goods/']" [queryParams]="{id:item.goodsName}">
+        <p>{{item.goodsName}}</p>
+      </a>
+    </div>
+    <div id="other">
+      <p>价格：{{item.price}}元</p>
+      <p>折扣：{{item.discount}}折</p>
+    </div>
+  </li>
+</ul>
