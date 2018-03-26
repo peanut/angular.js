@@ -1,5 +1,6 @@
-
-<app-input (getContent)="getCon($event)" ></app-input>
-<!-- <h1>{{content}}</h1> -->
-<app-list [tolist]="tolist" [doing]="doing"></app-list>
-
+<a routerLink="/todolist" routerLinkActive="active">todolist</a>
+<a routerLink="{{'/home/'+ no + '/' + no}}" routerLinkActive="active">home</a>
+<!-- <a [routerLink]="['/home/', 200, 300]" routerLinkActive="active">home</a> -->
+<a routerLink="/goodlistlink" routerLinkActive="active">goodslist</a>
+<br/>
+<router-outlet></router-outlet>
