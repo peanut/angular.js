@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { GoodslistComponent } from './components/goodslist/goodslist.component';
 import { VoterComponent } from './components/voter/voter.component';
@@ -14,6 +15,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NopageComponent } from './components/nopage/nopage.component';
 import { GoodsComponent } from './components/goods/goods.component';
 import { GoodlistlinkComponent } from './components/goodlistlink/goodlistlink.component';
+=======
+import { InputComponent } from './components/input/input.component';
+import { ListComponent } from './components/list/list.component';
+import { AddLocalStorageService } from './services/add-local-storage.service';
+>>>>>>> 8d25882812fdfcc9fc6f6810f16659bdfe8f5086
 
 @NgModule({
   declarations: [
@@ -46,6 +52,12 @@ import { GoodlistlinkComponent } from './components/goodlistlink/goodlistlink.co
   providers: [
     GetDataService
   ],
+<<<<<<< HEAD
+=======
+  providers: [
+    AddLocalStorageService    
+  ],
+>>>>>>> 8d25882812fdfcc9fc6f6810f16659bdfe8f5086
   bootstrap: [AppComponent]
 })
 export class AppModule { }
